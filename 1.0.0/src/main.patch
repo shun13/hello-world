@@ -1,5 +1,3 @@
-diff --git a/1.0.0/src/main.c b/1.0.0/src/main.c
-index 6a892bc..f5874f8 100644
 --- a/1.0.0/src/main.c
 +++ b/1.0.0/src/main.c
 @@ -4,7 +4,7 @@ int main( void )
