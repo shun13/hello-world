@@ -12,6 +12,9 @@ OBJ = $(SOURCES:.c=.o)
 
 all: $(EXE)
 
+install: $(EXE)
+	install -s $(EXE) ../bin
+
 $(EXE): $(OBJ)
 	$(CC) -o $@ $^
 
