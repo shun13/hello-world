@@ -1,0 +1,19 @@
+diff --git a/1.0.0/src/main.c b/1.0.0/src/main.c
+index e00c84d..6a892bc 100644
+--- a/1.0.0/src/main.c
++++ b/1.0.0/src/main.c
+@@ -2,6 +2,14 @@
+ 
+ int main( void )
+ {
++	int i, a;
++	a = 0;
++	for( i = 0; i < 5; i++ ) {
++		a += i;
++	}
++
+ 	printf("Hello world.\n");
++	printf("%d\n", a);
++
+ 	return 0;
+ }
