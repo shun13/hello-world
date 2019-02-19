@@ -5,6 +5,7 @@ CFLAGS = -O0
 SRCDIR = ../src
 SOURCES = $(wildcard $(SRCDIR)/*.c)
 OBJ = $(SOURCES:.c=.o)
+PREFIX = ../bin
 
 .SUFFIXES: .c .o
 
@@ -13,7 +14,7 @@ OBJ = $(SOURCES:.c=.o)
 all: $(EXE)
 
 install: $(EXE)
-	install -s $(EXE) ../bin
+	install -s $(EXE) $(PREFIX)
 
 $(EXE): $(OBJ)
 	$(CC) -o $@ $^
