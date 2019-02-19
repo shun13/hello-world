@@ -1,8 +1,10 @@
 
 EXE = hello-world
-OBJ = main.o
 CC  = gcc
 CFLAGS = -O0
+SRCDIR = ../src
+SOURCES = $(wildcard $(SRCDIR)/*.c)
+OBJ = $(SOURCES:.c=.o)
 
 .SUFFIXES: .c .o
 
@@ -11,10 +13,10 @@ CFLAGS = -O0
 all: $(EXE)
 
 $(EXE): $(OBJ)
-	$(CC) -o $(EXE) $^
+	$(CC) -o $@ $^
 
-.c.o:
-	$(CC) $(CFLAGS) -c $<
+%.o: $(SRCDIR)/%.c
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
 	$(RM) $(EXE) $(OBJ)
